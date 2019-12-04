@@ -68,6 +68,7 @@ app.get('/', function(req, res) {
 app.get('/library', function(req, res) {
     res.send('Welcome to Library');
 })
-app.listen(3000, function() {
+const port=process.env.PORT||3000
+app.listen(port, function() {
     console.log("listening to port " + chalk.red('3000'));
 }); //till it reaches the port3000
